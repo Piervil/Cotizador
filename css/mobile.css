@@ -10,11 +10,11 @@
 }
 
 .plan li {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .plan__active::before {
-  right: 15rem;
+  right: 13rem;
 }
 
 .card {
