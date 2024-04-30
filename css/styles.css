@@ -1,0 +1,241 @@
+/* RESET & MAIN STYLING */
+:root {
+  --primary: #2a2d33;
+  --bg-color: #13161d;
+  --text-color: #d3d6d9;
+  --grown: #9b6156;
+  --grown2: #c94d47;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Montserrat-Oswald/Oswald/Oswald-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Oswald/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald";
+  font-weight: 900;
+  text-align: center;
+}
+
+
+/* PLAN */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 4rem 0;
+}
+
+.container {
+  background: var(--primary);
+  width: 100%;
+  min-height: 100vh;
+  max-width: 80rem;
+  position: relative;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  padding-bottom: 7rem;
+} 
+
+.plan {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 3rem;
+  color: var(--grown);
+  position: relative;
+  cursor: pointer;
+}
+
+.plan li:hover {
+  color: var(--grown2);
+}
+
+.plan__active {
+  color: var(--grown2);
+}
+
+.plan__active::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: .3rem;
+  background: var(--grown2);
+  z-index: 2;
+  bottom: -.3rem;
+  right: 30rem;
+  border-radius: 1.5rem;
+}
+
+.line {
+  height: .4rem;
+  width: 100%;
+  background: var(--text-color);
+}
+
+/* TOGGLE */
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.toggle img {
+  height: 4rem;
+  margin-inline: 2rem;
+}
+
+.toggle__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  background: var(--grown2);
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: .5rem 1.5rem;
+  border-radius: 2rem;
+  font-family: "Oswald";
+}
+
+.toggle__details span:last-child {
+  background: var(--text-color);
+  color: var(--primary);
+  padding: .2rem 2rem;
+  border-radius: 2rem;
+}
+
+/* BAND */
+.band {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.band__info {
+  background: var(--bg-color);
+  border: 1px solid var(--text-color);
+  padding: 4rem;
+  margin-block: 3rem;
+  border-radius: 1rem;
+}
+
+.band__info h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.band__info p {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.band p {
+  padding: 0 3rem;
+  line-height: 1.7;
+}
+
+input {
+  width: 90%;
+  display: block;
+  margin: 3rem auto;
+}
+
+/* Card */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card__details {
+  background: var(--bg-color);
+  width: 35rem;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 1rem;
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.card__details:hover {
+  transition: all .5s;
+  transform: translateY(-5px);
+}
+
+.card__details h3 {
+  font-size: 2.8rem;
+  padding-bottom: 1.5rem;
+}
+
+.card__details span {
+  font-size: 3.2rem;
+  font-weight: 800;
+  display: block;
+  width: 70%;
+  margin: auto;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 2rem;
+}
+
+.card__details p {
+  padding: 2rem 0;
+  line-height: 1.5;
+}
+
+.card__details button {
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--grown2);
+}
+
+.card__details button:hover {
+  background: var(--grown);
+}
